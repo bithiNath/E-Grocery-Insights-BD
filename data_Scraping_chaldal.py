@@ -1,13 +1,20 @@
 #import libraries
 import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By 
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-#setup automatic chrome driver
+
+#helper funtion
+def get_text(source, selector, by=By.CSS_SELECTOR):
+    product_info = source.find_elements(by, selector)
+    return product_info[0].text if product_info else "N/A"
+           
+
+#setup automatic webdriver
 chrome_options = Options()
 chrome_options.add_argument("--window-size=1920,1080")
 chrome_options.add_argument("--no-sandbox")
@@ -17,101 +24,83 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
 driver.delete_all_cookies()
 
+
+#dictionary for product_link
 product_links = {
-    "Fruits":"https://www.shwapno.com/fresh-fruits",
-    "Vegetables": "https://www.shwapno.com/fresh-vegetables",
-    "Meat & Fish": ["https://www.shwapno.com/meat", "https://www.shwapno.com/fish"],
-    "Dairy & Eggs": ["https://www.shwapno.com/dairy", "https://www.shwapno.com/eggs"],
-    "Rice": "https://www.shwapno.com/rice",
-    "Oil": "https://www.shwapno.com/oil",
-    "Lentils & Pulses": "https://www.shwapno.com/daal-or-lentil",
-    "Salt & Sugar" : "https://www.shwapno.com/salt-and-sugar",
-    "Spices & Ingredients" : ["https://www.shwapno.com/spices", "https://www.shwapno.com/ready-mix"],
-    "Sauces & pickles": "https://www.shwapno.com/sauces-and-pickles",
-    "Breakfast" : "https://www.shwapno.com/breakfast",
-    "Snacks": "https://www.shwapno.com/snacks",
-    "Candy, chocolate & Ice-cream": ["https://www.shwapno.com/candy-chocolate", "https://www.shwapno.com/ice-cream"],
-    "Beverages": "https://www.shwapno.com/beverages",
-    "Baking & Flour" : "https://www.shwapno.com/baking-needs",
-    "Frozen Snacks": "https://www.shwapno.com/Frozen",
-    "Canned food": "https://www.shwapno.com/canned-food",
-    "Personal care": "https://www.shwapno.com/personal-care",
-    "Baby Care": ["https://www.shwapno.com/baby-food-and-care", "https://www.shwapno.com/Diaper"],  
-    "Cleaning-supplies": "https://www.shwapno.com/home-cleaning",
-    "Home & kitchen": "https://www.shwapno.com/home-and-kitchen",
-    "Stationeries": "https://www.shwapno.com/office-products",
+    "Fruits":"https://chaldal.com/fresh-fruit",
+    "Vegetables": "https://chaldal.com/fresh-vegetable",
+    "Meat & Fish": ["https://chaldal.com/chicken-poultry", "https://chaldal.com/premium-perishables", "https://chaldal.com/frozen-fish", "https://chaldal.com/meat-new", "https://chaldal.com/tofu-meat-alternatives", "https://chaldal.com/dried-fish" ],
+    "Dairy & Eggs": ["https://chaldal.com/ghee", "https://chaldal.com/powder-milk", "https://chaldal.com/liquid-uht-milk", "https://chaldal.com/yogurt", "https://chaldal.com/cheeses", "https://chaldal.com/condensed-milk-cream", "https://chaldal.com/butter-sour-cream", "https://chaldal.com/eggs"], 
+    "Rice": "https://chaldal.com/rices",
+    "Oil": "https://chaldal.com/oil",
+    "Lentils & Pulses": "https://chaldal.com/dal-or-lentil",
+    "Salt-sugar": "https://chaldal.com/salt-sugar",
+    "Spices & Ingredients": ["https://chaldal.com/spices", "https://chaldal.com/miscellaneous", "https://chaldal.com/premium-ingredients", "https://chaldal.com/ready-mix"],
+    "Sauces & pickles": ["https://chaldal.com/tomato-sauces", "https://chaldal.com/pickles", "https://chaldal.com/cooking-sauces", "https://chaldal.com/other-sauces"],
+    "Breakfast": ["https://chaldal.com/breads", "https://chaldal.com/tea-coffee-2", "https://chaldal.com/local-breakfast", "https://chaldal.com/cereals", "https://chaldal.com/spreads-syrups", "https://chaldal.com/energy-boosters"],
+    "Snacks" : ["https://chaldal.com/shemai-suji", "https://chaldal.com/noodles", "https://chaldal.com/cookies-2", "https://chaldal.com/local-snacks", "https://chaldal.com/chips-pretzels", "https://chaldal.com/plain-biscuits", "https://chaldal.com/toast-biscuits", "https://chaldal.com/cream-biscuits", "https://chaldal.com/pasta-macaroni", "https://chaldal.com/soups", "https://chaldal.com/popcorn-nuts", "https://chaldal.com/salted-biscuits", "https://chaldal.com/cakes", "https://chaldal.com/salad-dressing"], 
+    "Candy & chocolate": ["https://chaldal.com/chocolates", "https://chaldal.com/wafers", "https://chaldal.com/candies", "https://chaldal.com/mints-mouth-fresheners", "https://chaldal.com/halal-marshmallows"],
+    "Beverages": ["https://chaldal.com/beverages-tea", "https://chaldal.com/soft-drinks", "https://chaldal.com/coffees", "https://chaldal.com/powder-mixes", "https://chaldal.com/juice", "https://chaldal.com/water"],
+    "Baking & Flour": ["https://chaldal.com/flour", "https://chaldal.com/nuts-dried-fruits", "https://chaldal.com/baking-ingredients", "https://chaldal.com/baking-tools", "https://chaldal.com/baking-mixes", "https://chaldal.com/colors-flavours"],
+    "Frozen Snacks": ["https://chaldal.com/chicken-snacks", "https://chaldal.com/frozen-parathas-roti", "https://chaldal.com/vegetable-snacks", "https://chaldal.com/beef-snacks", "https://chaldal.com/fish-snacks"],
+    "Canned food": ["https://chaldal.com/mushroom-cans", "https://chaldal.com/vegetable-cans", "https://chaldal.com/fish-cans", "https://chaldal.com/canned-fruits"],
+    "Personal-care": ["https://chaldal.com/womens-soaps", "https://chaldal.com/hair-care", "https://chaldal.com/female-shampoo", "https://chaldal.com/feminine-care", "https://chaldal.com/female-moisturizer", "https://chaldal.com/face-wash-scrub", "https://chaldal.com/female-deo", "https://chaldal.com/womens-perfume", "https://chaldal.com/womens-shower-gel", "https://chaldal.com/masks-cleansers", "https://chaldal.com/serum-oil-toners", "https://chaldal.com/mens-soaps", "https://chaldal.com/mens-perfume", "https://chaldal.com/shampoo", "https://chaldal.com/shaving-needs", "https://chaldal.com/beard-grooming", "https://chaldal.com/deodorants", "https://chaldal.com/razors-blades", "https://chaldal.com/mens-hair-care", "https://chaldal.com/lotion-cream", "https://chaldal.com/mens-facewash", "https://chaldal.com/mens-shower-gels", "https://chaldal.com/liquid-handwash", "https://chaldal.com/hand-sanitizer", "https://chaldal.com/tissue-wipes", "https://chaldal.com/toothpastes", "https://chaldal.com/toothbrushes", "https://chaldal.com/mouthwash-others", "https://chaldal.com/soaps", "https://chaldal.com/lotions", "https://chaldal.com/petroleum-jelly", "https://chaldal.com/creams", "https://chaldal.com/face-wash-mask", "https://chaldal.com/body-hair-oil", "https://chaldal.com/lipsticks-lip-balm", "https://chaldal.com/talcom-powder", "https://chaldal.com/hair-color" ],
+    "Baby care": ["https://chaldal.com/diapers", "https://chaldal.com/medium-2", "https://chaldal.com/large-2", "https://chaldal.com/extra-large-15-kg-diapers", "https://chaldal.com/small-2", "https://chaldal.com/newborn-2", "https://chaldal.com/milk-juice-drinks", "https://chaldal.com/toddler-food", "https://chaldal.com/formula", "https://chaldal.com/bath-skincare", "https://chaldal.com/wipes", "https://chaldal.com/baby-oral-care", "https://chaldal.com/newborn-essentials", "https://chaldal.com/baby-accessories", "https://chaldal.com/feeders"],
+    "Cleaning-supplies": ["https://chaldal.com/dish-wash", "https://chaldal.com/laundry", "https://chaldal.com/toilet-cleaning", "https://chaldal.com/paper-products", "https://chaldal.com/pest-control", "https://chaldal.com/floor-glass-cleaners", "https://chaldal.com/cleaning-accessories", "https://chaldal.com/air-freshners", "https://chaldal.com/trash-bags", "https://chaldal.com/shoe-care", "https://chaldal.com/trash-bin-basket"],
+    "Home & kitchen": ["https://chaldal.com/kitchen-accessories", "https://chaldal.com/kitchen-appliances", "https://chaldal.com/lights", "https://chaldal.com/mosquito-swatter", "https://chaldal.com/electric-multiplug", "https://chaldal.com/electronics", "https://chaldal.com/tools-hardware", "https://chaldal.com/baskets-buckets", "https://chaldal.com/box-container", "https://chaldal.com/gardening", "https://chaldal.com/rack-organizer", "https://chaldal.com/disposables"],
+    "Stationeries": ["https://chaldal.com/batteries", "https://chaldal.com/calculators", "https://chaldal.com/glue-tapes", "https://chaldal.com/stapler-punch", "https://chaldal.com/organizing-accessories", "https://chaldal.com/cutting-2", "https://chaldal.com/file-folder", "https://chaldal.com/measuring", "https://chaldal.com/desk-organizers", "https://chaldal.com/pens", "https://chaldal.com/highlighters", "https://chaldal.com/printer-ink", "https://chaldal.com/pencils", "https://chaldal.com/erasers-correction-fluid", "https://chaldal.com/printing-paper", "https://chaldal.com/notebook-diary", "https://chaldal.com/school-supplies", "https://chaldal.com/color-pencil"]
 }
 
 
-#list to store all products
 all_products = []
 
-#loop through each category & scrape products
 for category, value in product_links.items():
-   links = value if isinstance(value, list) else[value]
+    links = value if isinstance(value, list) else[value]
 
-   for link in links:
-     try:  
-      driver.get(link)
-      time.sleep(5)
-      driver.refresh() 
+    for link in links:
+        try:
+           driver.delete_all_cookies()
+           driver.get(link)
+           print(f"scraping : {category}........")
+           time.sleep(3)
+           
+           #Scroll to bottom for loading all products
+           for _ in range(15):
+               driver.execute_script("window.scrollBy(0, 1000)")
+               time.sleep(2)
+ 
+           #wait for all product-box load
+           products = WebDriverWait(driver, 30).until(EC.presence_of_all_elements_located((By.CLASS_NAME,"productV2Catalog")))
 
-      print(f"Scraping : {category}.....")
-      
-      time.sleep(5)
+           #find product details     
+           for product in products:
+               title = get_text(product, "pvName", By.CLASS_NAME)
+               currency = get_text(product, "currency", By.CLASS_NAME)
 
-      #scroll to bottom to load all products
-      for _ in range(10):
-          driver.execute_script("window.scrollBy(0, 1000);")
-          time.sleep(2)
+               #To handle price
+               previous_price = get_text(product, ".price span", By.CSS_SELECTOR) 
+               current_price = get_text(product, ".productV2discountedPrice span", By.CSS_SELECTOR) 
+               
+               final_current_price = previous_price if current_price == "N/A" else current_price
 
-      #wait for product boxes to load
-      products = WebDriverWait(driver, 45).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "product-box")))
-    
-      #loop through all products on the page
-      for product in products:
-          try:  
-             title = product.find_element(By.CLASS_NAME, "product-box-title").text
+               unit = get_text(product, ".subText span", By.CSS_SELECTOR)
 
-             #to handle price & unit
-             try:
-                 price_container = product.find_element(By.CLASS_NAME, "product-price")
-                 spans = price_container.find_elements(By.TAG_NAME, "span")
+              #append
+               all_products.append({"Category": category, "Title": title, "Currency": currency, "Previous_price": previous_price, "Current_price": final_current_price, "Unit":unit})
 
-                 if len(spans) >=3:
-                       previous_price, current_price,  unit = spans[0].text, spans[1].text, spans[2].text 
-                       
-                 elif len(spans) == 2:
-                       previous_price, current_price, unit = spans[0].text, spans[0].text, spans[1].text 
-                 else: 
-                       previous_price, current_price, unit = "N/A", "N/A", "N/A" 
-             except:
-                    previous_price, current_price, unit = "N/A",  "N/A", "N/A"
+        except Exception as e:
+             print(f"error in {category} : {e}")
 
-           #to handle stock
-             try:
-                 stock = product.find_element(By.CLASS_NAME, "add-to-cart-button").text
-             except:
-                 stock = "out of stock"
-            
-           #Append
-             all_products.append({"Category": category, "Title": title, "Previous_price": previous_price, "Current_price": current_price, "Unit":unit, "Stock":stock})
-
-          except:
-             continue 
-      
-     except Exception as e: 
-           print(f"Error in {category}: {e}")   
-
-           if "invalid session id" in str(e).lower():
+             if "invalid session id" in str(e).lower():
                 driver = webdriver.Chrome(options=chrome_options)
                 continue
 
-print(f"Total products scraped: {len(all_products)}")
+print(f"Total scraped products {len(all_products)} from total {len(product_links)} categories.")
 
 driver.quit()
 
 if all_products:
-     df = pd.DataFrame(all_products)
-     df.to_csv("Shwapno_data.csv", index=False, encoding="utf-8-sig")
-     print(f"Total {len(all_products)} products from {len(product_links)} categories have been saved to 'Shwapno_data.csv'")
+    df = pd.DataFrame(all_products)
+    
+    df.to_csv("chaldal_data.csv", index=False, encoding="utf-8-sig")
+    print("Success: Data saved to chaldal_data.csv")
