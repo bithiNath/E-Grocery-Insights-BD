@@ -17,9 +17,10 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
 driver.delete_all_cookies()
 
+
 product_links = {
     "Fruits":"https://www.shwapno.com/fresh-fruits",
-    "Vegetables": "https://www.shwapno.com/fresh-vegetables",
+    "Vegetables": ["https://www.shwapno.com/fresh-vegetables", "https://www.shwapno.com/dry-vegetables"],
     "Meat & Fish": ["https://www.shwapno.com/meat", "https://www.shwapno.com/fish"],
     "Dairy & Eggs": ["https://www.shwapno.com/dairy", "https://www.shwapno.com/eggs"],
     "Rice": "https://www.shwapno.com/rice",
@@ -35,7 +36,7 @@ product_links = {
     "Baking & Flour" : "https://www.shwapno.com/baking-needs",
     "Frozen Snacks": "https://www.shwapno.com/Frozen",
     "Canned food": "https://www.shwapno.com/canned-food",
-    "Personal care": "https://www.shwapno.com/personal-care",
+    "Personal care": ["https://www.shwapno.com/personal-care", "https://www.shwapno.com/health-care"],
     "Baby Care": ["https://www.shwapno.com/baby-food-and-care", "https://www.shwapno.com/Diaper"],  
     "Cleaning-supplies": "https://www.shwapno.com/home-cleaning",
     "Home & kitchen": "https://www.shwapno.com/home-and-kitchen",
