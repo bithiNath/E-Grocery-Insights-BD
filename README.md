@@ -1,51 +1,76 @@
 <h1>E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries.</h1>
 
-<p>Extracted and analyzed 7,197+ products from two leading Bangladeshi e-grocery platforms, with source-wise data preserved and consistently cleaned across both datasets. The processed data was then analyzed and visualized in Tableau, including brand distribution, promotional offer and savings patterns, price variance comparisons, and key cross-source insights.<p>
+<p>Extracted and analyzed 7,197 products from two leading Bangladeshi e-grocery platforms, with source-wise data preserved and consistently cleaned across both datasets. The processed data was then analyzed and visualized in Tableau, including brand distribution, promotional offer and savings patterns, price variance comparisons, and key cross-source insights.<p>
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-2.0-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13.1-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-4.41.0x-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-3.0.1-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-1.24-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![License](https://img.shields.io/github/license/yourusername/yourrepo)
-![Last commit](https://img.shields.io/github/last-commit/yourusername/yourrepo)
+![License](https://img.shields.io/github/license/bithiNath/E-Grocery_Insight_BD)
+![Last commit](https://img.shields.io/github/last-commit/bithiNath/E-Grocery_Insight_BD)
 
 ## 📊 Dashboard Preview
-
+<br>
 <div align="center">
-  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="700"/>
+  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="800"/>
 </div>
 
 ## 📌 About
 
-This is a dynamic web scraping project that collects real-time grocery data from two online sources. The project aims to help consumers identify savings across categories,explore brand availability, analyze offers by product size and price segment, understand brand dominance, and compare price differences between the two sources. Instead of direct product matching, this project compares market trends and pricing across sources at the sub-category and brand levels.A structured data table is included to provide a clear overview of the data organization.
+Bangladesh's e-grocery sector is experiencing rapid growth, driven by factors such as bulk purchase discounts, exclusive product offers, free delivery above certain order thresholds, and the convenience of time-saving shopping. These incentives are reshaping how urban consumers purchase daily essentials. However, with multiple platforms offering varying prices, brands, and deals, consumers often struggle to identify where they can save the most. This project bridges that gap by scraping real-time grocery data from two major e-grocery sources in Bangladesh — **Chaldal** and **Shwapno** — enabling a data-driven comparison at the sub-category and brand level.
+Rather than direct product matching, this project focuses on market-level trends to uncover:
+- Which platform and product sub-categories offer the most savings
+- How brand availability differs across platforms
+- How offers vary by product size and price segment
+- Which brands dominate specific categories on each platform
+- Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
+
+### 📊 Scope
+- Platforms covered: **Chaldal** and **Shwapno**
+- Data collection method: **Dynamic web scraping** using Selenium
+- Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
+- Total unique brands identified: **~700**
+- Data collected: **Late March 2026**
+
+### ⚠️ Limitations
+- ~890 duplicates and a few null product names were removed during cleaning.
+- ~350 misplaced products within sub-categories were removed, keeping only relevant listings.
+- Same product name may appear with different prices or unit sizes across platforms.
+- Brand names were extracted from product titles using keyword frequency analysis, followed by manual correction — resulting in **~700 unique brands** identified.
+- ~4,000 products had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine actual unit, `offer_status`,
+  `Actual_unit_price`, and `Market_price`.
+- Out-of-stock status on Chaldal could not be scraped, so such products remain in the dataset and may slightly bias the results.
+- No direct product matching — comparison is done at the sub-category and brand level due to inconsistent product naming across platforms.
 
 ## 📊 Data Overview
 
 <div align="center">
-  <h1>Product Taxonomy</h1>
+  <h2>Product Taxonomy</h2>
   <h3>Section → Category → Sub-Category</h3>
+  <img src="./doc/product_taxonomy.svg" width="800" alt="Product Taxonomy"/>
 </div>
-
-![Product Taxonomy](./doc/product_taxonomy.svg)
 
 ## 📈 Project Highlights
 
-- Extracted and analyzed 7,000+ products from multiple e-grocery platforms
-- Performed data cleaning, unit standardization, and price normalization
+- Extracted 8,087 products from two e-grocery platforms and after cleaning duplicates and null analyzed 7,197 products.
+- Performed unit standardization, and price normalization
 - Built price comparison model across brands and sources
 - Identified price variance patterns across sub-categories
 - Developed interactive Tableau dashboards for visualization
 
 ## ✨ Features
 
-- 📊 Overview of Products & Brands (Side by Side Bar Graph) :
-- 🥧 Brand Dominance by Product Count (Pie Chart) :
-- 📈 Product Volume & Brand Diversity (Line & Bar Chart) :
-- 🫧 Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :
-- 🌡️ Offer Distribution by Product Size & Price Segments (Heat Map) :
-- 🔵 Price Variance between Regular and All Products across Sources (Circle Chart) :
+- 📊 Overview of Products & Brands (Side by Side Bar Graph) : Compares total product listings and unique brand counts across 
+  Chaldal and Shwapno by section, category, and sub-category.
+- 🥧 Brand Dominance by Product Count (Pie Chart) : Shows which top 10 brands hold the largest share of products within each category per platform.
+- 📈 Product Volume & Brand Diversity (Line & Bar Chart) : Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
+- 🫧 Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) : Highlights which sub-categories have the highest concentration of discounted and BOGO products by    total savings percentage, and where free products are most available across both platforms.  
+- 🌡️ Offer Distribution by Product Size & Price Segments (Heat Map) : Reveals which size and price segment combinations have the highest offer concentration on each   platform.
+- 🔵 Price Variance between Regular and All Products across Sources (Circle Chart) : Compares price differences between all products and regularly purchased food items, focusing on common brands within the same sub-category, segmented by price range across both platforms.
+
 
 ## ⚙️ Quick Start
 
@@ -116,7 +141,7 @@ E-Grocery Insights/
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🤝 Contributing
 
@@ -124,5 +149,9 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📬 Contact
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: youremail@gmail.com
+- **GitHub:** [@bithiNath](https://github.com/bithiNath)
+- **LinkedIn:** [Bithi Nath](https://linkedin.com/in/yourusername)
+
+---
+
+<p align="center">Made with ❤️ by <a href="https://github.com/bithiNath">@bithiNath</a></p>
