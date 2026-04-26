@@ -1,6 +1,7 @@
-<h1>E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries.</h1>
+# 🛒 E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries
 
-<p>Extracted and analyzed 7,197 products from two leading Bangladeshi e-grocery platforms, with source-wise data preserved and consistently cleaned across both datasets. The processed data was then analyzed and visualized in Tableau, including brand distribution, promotional offer and savings patterns, price variance comparisons, and key cross-source insights.<p>
+Extracted and analyzed **7,197 product listings** from **Chaldal** and **Shwapno** — two leading Bangladeshi e-grocery platforms — uncovering brand distribution, 
+promotional savings, offer patterns, and price variance through data-driven analysis and Tableau visualizations.
 
 ![Python](https://img.shields.io/badge/Python-3.13.1-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Selenium](https://img.shields.io/badge/Selenium-4.41.0x-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
@@ -53,13 +54,6 @@ Rather than direct product matching, this project focuses on market-level trends
   <img src="./doc/product_taxonomy.svg" width="800" alt="Product Taxonomy"/>
 </div>
 
-## 📈 Project Highlights
-
-- Extracted 8,087 products from two e-grocery platforms and after cleaning duplicates and null analyzed 7,197 products.
-- Performed unit standardization, and price normalization
-- Built price comparison model across brands and sources
-- Identified price variance patterns across sub-categories
-- Developed interactive Tableau dashboards for visualization
 
 ## ✨ Features
 
@@ -75,36 +69,51 @@ Rather than direct product matching, this project focuses on market-level trends
 ## ⚙️ Quick Start
 
 1. 🔽 Clone Repository
-   `git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
-cd E-Grocery-Insights-BD`
+   
+   ```
+     git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
+     cd E-Grocery-Insights-BD
+   ```
+
 2. 🐍 Setup Environment (Windows-friendly)
+   
    ```
     python -m venv venv
     venv\Scripts\activate
    ```
+   
 3. 📦 Install minimal dependencies
+   
    ```
     pip install -r requirements.txt
    ```
+   
 4. ▶️ Run Data collection Script
-   ```
-   python src/data_Scraping_chaldal.py
-   python src/data_scraping_shwapno.py
-   ```
+   
+    ```
+      python src/data_Scraping_chaldal.py
+      python src/data_scraping_shwapno.py
+    ```
+   
 5. 🧹 Run Data Cleaning (Notebook)
-   ```
+    
+    ```
       data_cleaning.ipynb
-   ```
-6. 📂 Data Information
-   ```
-   - Raw data is excluded (.gitignore)
-   - Available required data: `data/interim/combined_data_BrandName_cleaned_3.csv`
-   - Generate other data using scripts and notebook
-   ```
-7. 📊 Open Tableau Dashboard
-   ```
-   Tableau public view : https://public.tableau.com/app/profile/bithi.nath/viz/CSscientistupdat
-   ```
+    ```
+   
+ 6. 📂 Data Information
+    
+    ```
+      - Raw data is excluded (.gitignore)
+      - Available required data: `data/interim/combined_data_BrandName_cleaned_3.csv`
+      - Generate other data using scripts and notebook
+    ```
+
+ 7. 📊 Open Tableau Dashboard
+    
+    ```
+      Tableau public view : https://public.tableau.com/app/profile/bithi.nath/viz/CSscientistupdat
+    ```
 
 Alternatively, Check the required file here: https://github.com/bithiNath/CS-Scientist/blob/main/selenium_scraper/scraped_data.csv
 
@@ -154,4 +163,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
-<p align="center">Made with ❤️ by <a href="https://github.com/bithiNath">@bithiNath</a></p>
+<p align="center">Built by ❤️ by <a href="https://github.com/bithiNath">@bithiNath</a></p>
