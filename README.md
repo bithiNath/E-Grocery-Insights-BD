@@ -20,12 +20,16 @@
 ## 📌 About
 This is a dynamic web scraping project that collects real-time grocery data from two online sources. The project aims to help consumers identify savings across categories,explore brand availability, analyze offers by product size and price segment, understand brand dominance, and compare price differences between the two sources.  Instead of direct product matching, this project compares market trends and pricing across sources at the sub-category and brand levels.A structured data table is included to provide a clear overview of the data organization.
 
-## The Challenge — More Than Just Scraping
-
-
 ## 📊 Data Overview
 ![Product Taxonomy](./doc/product_taxonomy.svg)
 
+
+## 📈 Project Highlights
+- Extracted and analyzed 7,000+ products from multiple e-grocery platforms
+- Performed data cleaning, unit standardization, and price normalization
+- Built price comparison model across brands and sources
+- Identified price variance patterns across sub-categories
+- Developed interactive Tableau dashboards for visualization
 
 ## ✨ Features
 - 📊 Overview of  Products & Brands (Side by Side Bar Graph) : 
@@ -35,39 +39,48 @@ This is a dynamic web scraping project that collects real-time grocery data from
 - 🌡️ Offer Distribution by Product Size & Price Segments (Heat Map) :
 - 🔵 Price Variance between Regular and All Products across Sources (Circle Chart) :
 
-## ⚙️ Installation
+## ⚙️ Quick Start
 
-Quick Start
-1. Environment Setup (Windows-friendly)
-
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
-pip install -r requirements.txt
-```
+1. 🔽 Clone Repository
+   ``
+   git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
+   cd E-Grocery-Insights-BD
+   ``
+2. 🐍 Setup Environment (Windows-friendly)
+   ```
+    python -m venv venv
+    venv\Scripts\activate
+   ```
+3. 📦 Install minimal dependencies
+   ```
+    pip install -r requirements.txt
+   ```
+4. ▶️ Run Data collection Script
+   ```
+   python src/data_Scraping_chaldal.py
+   python src/data_scraping_shwapno.py
+   ```
+5. 🧹 Run Data Cleaning (Notebook)
+   ```
+      data_cleaning.ipynb
+   ```
+6. 📂 Data Information
+   ```
+   - Raw data is excluded (.gitignore)
+   - Available required data: `data/interim/combined_data_BrandName_cleaned_3.csv`
+   - Generate other data using scripts and notebook
+   ```
    
-# Create virtual environment
-python -m venv .venv
-.venv\Scripts\activate
-
-# Install minimal dependencies
-pip install -r requirements.txt
+7. 📊 Open Tableau Dashboard
+   ```
+   Tableau public view : https://public.tableau.com/app/profile/bithi.nath/viz/CSscientistupdat
+   ```
 
 
-```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
-pip install -r requirements.txt
-```
-
-## 🚀 Usage
-
-```bash
-python main.py
-```
+Alternatively, Check the required file here: https://github.com/bithiNath/CS-Scientist/blob/main/selenium_scraper/scraped_data.csv
 
 
 ## Project Stucture
-
 
 ```text
 E-Grocery Insights/
