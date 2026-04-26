@@ -1,4 +1,4 @@
-<h1>E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries.</h1>  
+<h1>E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries.</h1>
 
 <p>Extracted and analyzed 7,197+ products from two leading Bangladeshi e-grocery platforms, with source-wise data preserved and consistently cleaned across both datasets. The processed data was then analyzed and visualized in Tableau, including brand distribution, promotional offer and savings patterns, price variance comparisons, and key cross-source insights.<p>
 
@@ -18,13 +18,34 @@
 </div>
 
 ## 📌 About
-This is a dynamic web scraping project that collects real-time grocery data from two online sources. The project aims to help consumers identify savings across categories,explore brand availability, analyze offers by product size and price segment, understand brand dominance, and compare price differences between the two sources.  Instead of direct product matching, this project compares market trends and pricing across sources at the sub-category and brand levels.A structured data table is included to provide a clear overview of the data organization.
+
+This is a dynamic web scraping project that collects real-time grocery data from two online sources. The project aims to help consumers identify savings across categories,explore brand availability, analyze offers by product size and price segment, understand brand dominance, and compare price differences between the two sources. Instead of direct product matching, this project compares market trends and pricing across sources at the sub-category and brand levels.A structured data table is included to provide a clear overview of the data organization.
 
 ## 📊 Data Overview
+
+<div align="center">
+  <h1>Product Taxonomy</h1>
+  <h3>Section → Category → Sub-Category</h3>
+
+  <br>
+
+  <table border="0">
+    <tr>
+      <td>
+        <img src="Food_items.png" alt="Food-items" width="400"/>
+      </td>
+      <td width="20"></td> 
+      <td>
+        <img src="Non-food_items.png" alt="Non-food_itmes" width="400"/>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ![Product Taxonomy](./doc/product_taxonomy.svg)
 
-
 ## 📈 Project Highlights
+
 - Extracted and analyzed 7,000+ products from multiple e-grocery platforms
 - Performed data cleaning, unit standardization, and price normalization
 - Built price comparison model across brands and sources
@@ -32,7 +53,8 @@ This is a dynamic web scraping project that collects real-time grocery data from
 - Developed interactive Tableau dashboards for visualization
 
 ## ✨ Features
-- 📊 Overview of  Products & Brands (Side by Side Bar Graph) : 
+
+- 📊 Overview of Products & Brands (Side by Side Bar Graph) :
 - 🥧 Brand Dominance by Product Count (Pie Chart) :
 - 📈 Product Volume & Brand Diversity (Line & Bar Chart) :
 - 🫧 Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :
@@ -42,10 +64,8 @@ This is a dynamic web scraping project that collects real-time grocery data from
 ## ⚙️ Quick Start
 
 1. 🔽 Clone Repository
-   ``
-   git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
-   cd E-Grocery-Insights-BD
-   ``
+   `git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
+cd E-Grocery-Insights-BD`
 2. 🐍 Setup Environment (Windows-friendly)
    ```
     python -m venv venv
@@ -70,15 +90,12 @@ This is a dynamic web scraping project that collects real-time grocery data from
    - Available required data: `data/interim/combined_data_BrandName_cleaned_3.csv`
    - Generate other data using scripts and notebook
    ```
-   
 7. 📊 Open Tableau Dashboard
    ```
    Tableau public view : https://public.tableau.com/app/profile/bithi.nath/viz/CSscientistupdat
    ```
 
-
 Alternatively, Check the required file here: https://github.com/bithiNath/CS-Scientist/blob/main/selenium_scraper/scraped_data.csv
-
 
 ## Project Stucture
 
@@ -89,21 +106,21 @@ E-Grocery Insights/
 │   ├── raw/                                          # Step 1: Scraped raw data
 │   │   ├── shwapno_data_1.csv
 │   │   └── chaldal_data_2.csv
-│   │ 
+│   │
 │   ├── interim/                                       # Step 3: Output after cleaning
 │   │   ├── combined_data_BrandName_3.csv
 │   │   ├── combined_data_BrandName_cleaned_3.csv
 │   │   └── df_combined_all_columns_4.csv
 │   │
-│   └── processed/                                    
+│   └── processed/
 │       └── df_final.csv                               # Step-4 Final Output
 │
-├── notebook/                                             
-│   └── data_cleaning.ipynb                            # Step 2: Cleaning data 
+├── notebook/
+│   └── data_cleaning.ipynb                            # Step 2: Cleaning data
 │
 ├── assets/
 │   └── visualization                                  # Step-5 : Deshboard Preview
-│   
+│
 ├── requirements.txt                                   # Step-6 : Required libraries
 |
 ├── .gitignore                                         # Step - 7 : Project Configuration
@@ -112,12 +129,14 @@ E-Grocery Insights/
 ```
 
 ## 📜 License
+
 This project is licensed under the MIT License.
 
-
 ## 🤝 Contributing
+
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📬 Contact
+
 - GitHub: [@yourusername](https://github.com/yourusername)
 - Email: youremail@gmail.com
