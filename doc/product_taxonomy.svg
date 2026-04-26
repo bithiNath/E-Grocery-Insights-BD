@@ -1,77 +1,73 @@
-<svg width="680" viewBox="0 0 680 490" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<svg width="100%" viewBox="0 0 760 430" role="img" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
 
-  <!-- Heading -->
-  <text x="340" y="30" font-size="16" font-weight="700" fill="#1a1a1a" text-anchor="middle">Product Taxonomy</text>
-  <text x="340" y="50" font-size="12" fill="#666" text-anchor="middle">Section  →  Category  →  Sub-Category</text>
+<!-- FOOD ITEMS outer container -->
+<rect x="20" y="20" width="390" height="390" rx="16" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+<text x="36" y="46" font-size="14" font-weight="600" fill="#085041" dominant-baseline="central">Food Items</text>
+<text x="36" y="63" font-size="12" fill="#0F6E56" dominant-baseline="central">3,056 SKUs · Chaldal + Shwapno</text>
 
-  <!-- FOOD ITEMS outer container -->
-  <rect x="20" y="66" width="390" height="404" rx="16" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="36" y="92" font-size="14" font-weight="600" fill="#085041">Food Items</text>
-  <text x="36" y="109" font-size="12" fill="#0F6E56">3,056 SKUs · Chaldal + Shwapno</text>
+<!-- Beverages & Instant Food -->
+<rect x="36" y="76" width="174" height="120" rx="10" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="123" y="100" font-size="13" font-weight="600" fill="#085041" text-anchor="middle" dominant-baseline="central">Beverages &amp;</text>
+<text x="123" y="116" font-size="13" font-weight="600" fill="#085041" text-anchor="middle" dominant-baseline="central">Instant Food</text>
+<text x="123" y="136" font-size="11" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">7 sub-categories</text>
+<text x="123" y="154" font-size="11" fill="#085041" text-anchor="middle" dominant-baseline="central">Chaldal 754</text>
+<text x="123" y="170" font-size="11" fill="#085041" text-anchor="middle" dominant-baseline="central">Shwapno 1,266</text>
 
-  <!-- Beverages & Instant Food -->
-  <rect x="36" y="122" width="174" height="120" rx="10" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="123" y="146" font-size="13" font-weight="600" fill="#085041" text-anchor="middle">Beverages &amp;</text>
-  <text x="123" y="162" font-size="13" font-weight="600" fill="#085041" text-anchor="middle">Instant Food</text>
-  <text x="123" y="182" font-size="11" fill="#0F6E56" text-anchor="middle">7 sub-categories</text>
-  <text x="123" y="200" font-size="11" fill="#085041" text-anchor="middle">Chaldal 754</text>
-  <text x="123" y="216" font-size="11" fill="#085041" text-anchor="middle">Shwapno 1,266</text>
+<!-- Cooking Essentials & Staples -->
+<rect x="222" y="76" width="174" height="120" rx="10" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="309" y="100" font-size="13" font-weight="600" fill="#085041" text-anchor="middle" dominant-baseline="central">Cooking Essentials</text>
+<text x="309" y="116" font-size="13" font-weight="600" fill="#085041" text-anchor="middle" dominant-baseline="central">&amp; Staples</text>
+<text x="309" y="136" font-size="11" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">6 sub-categories</text>
+<text x="309" y="154" font-size="11" fill="#085041" text-anchor="middle" dominant-baseline="central">Chaldal 409</text>
+<text x="309" y="170" font-size="11" fill="#085041" text-anchor="middle" dominant-baseline="central">Shwapno 518</text>
 
-  <!-- Cooking Essentials & Staples -->
-  <rect x="222" y="122" width="174" height="120" rx="10" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="309" y="146" font-size="13" font-weight="600" fill="#085041" text-anchor="middle">Cooking Essentials</text>
-  <text x="309" y="162" font-size="13" font-weight="600" fill="#085041" text-anchor="middle">&amp; Staples</text>
-  <text x="309" y="182" font-size="11" fill="#0F6E56" text-anchor="middle">6 sub-categories</text>
-  <text x="309" y="200" font-size="11" fill="#085041" text-anchor="middle">Chaldal 409</text>
-  <text x="309" y="216" font-size="11" fill="#085041" text-anchor="middle">Shwapno 518</text>
+<!-- Fresh & Perishables -->
+<rect x="36" y="210" width="360" height="180" rx="10" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="216" y="234" font-size="13" font-weight="600" fill="#085041" text-anchor="middle" dominant-baseline="central">Fresh &amp; Perishables</text>
+<text x="216" y="252" font-size="11" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">4 sub-categories · Chaldal 337 · Shwapno 322</text>
 
-  <!-- Fresh & Perishables -->
-  <rect x="36" y="256" width="360" height="192" rx="10" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="216" y="280" font-size="13" font-weight="600" fill="#085041" text-anchor="middle">Fresh &amp; Perishables</text>
-  <text x="216" y="298" font-size="11" fill="#0F6E56" text-anchor="middle">4 sub-categories · Chaldal 337 · Shwapno 322</text>
+<rect x="50" y="268" width="78" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="89" y="283" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Dairy &amp; Eggs</text>
 
-  <rect x="50" y="314" width="78" height="28" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="89" y="328" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Dairy &amp; Eggs</text>
+<rect x="140" y="268" width="60" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="170" y="283" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Fruits</text>
 
-  <rect x="140" y="314" width="60" height="28" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="170" y="328" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Fruits</text>
+<rect x="212" y="268" width="78" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="251" y="283" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Meat &amp; Fish</text>
 
-  <rect x="212" y="314" width="78" height="28" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="251" y="328" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Meat &amp; Fish</text>
+<rect x="302" y="268" width="82" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+<text x="343" y="283" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Vegetables</text>
 
-  <rect x="302" y="314" width="82" height="28" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-  <text x="343" y="328" font-size="10" fill="#085041" text-anchor="middle" dominant-baseline="central">Vegetables</text>
+<!-- NON-FOOD ITEMS outer container (starts at 450, wider at 290) -->
+<rect x="450" y="20" width="290" height="390" rx="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="468" y="46" font-size="14" font-weight="600" fill="#26215C" dominant-baseline="central">Non-Food Items</text>
+<text x="468" y="63" font-size="12" fill="#534AB7" dominant-baseline="central">4,471 SKUs · Chaldal + Shwapno</text>
 
-  <!-- NON-FOOD ITEMS outer container -->
-  <rect x="424" y="66" width="236" height="404" rx="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="440" y="92" font-size="14" font-weight="600" fill="#26215C">Non-Food Items</text>
-  <text x="440" y="109" font-size="12" fill="#534AB7">4,471 SKUs · Chaldal + Shwapno</text>
+<!-- Home & Lifestyle -->
+<rect x="468" y="76" width="254" height="148" rx="10" fill="#CECBF6" stroke="#534AB7" stroke-width="0.8"/>
+<text x="595" y="100" font-size="13" font-weight="600" fill="#26215C" text-anchor="middle" dominant-baseline="central">Home &amp; Lifestyle</text>
+<text x="595" y="118" font-size="11" fill="#534AB7" text-anchor="middle" dominant-baseline="central">3 sub-categories</text>
+<text x="595" y="136" font-size="11" fill="#26215C" text-anchor="middle" dominant-baseline="central">Chaldal 626</text>
+<text x="595" y="154" font-size="11" fill="#26215C" text-anchor="middle" dominant-baseline="central">Shwapno 219</text>
 
-  <!-- Home & Lifestyle -->
-  <rect x="440" y="122" width="204" height="148" rx="10" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="542" y="146" font-size="13" font-weight="600" fill="#26215C" text-anchor="middle">Home &amp; Lifestyle</text>
-  <text x="542" y="164" font-size="11" fill="#534AB7" text-anchor="middle">3 sub-categories</text>
-  <text x="542" y="182" font-size="11" fill="#26215C" text-anchor="middle">Chaldal 626</text>
-  <text x="542" y="200" font-size="11" fill="#26215C" text-anchor="middle">Shwapno 219</text>
+<rect x="480" y="172" width="90" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="525" y="187" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Cleaning</text>
 
-  <rect x="452" y="216" width="76" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="490" y="230" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Cleaning</text>
+<rect x="582" y="172" width="118" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="641" y="187" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Stationeries</text>
 
-  <rect x="538" y="216" width="94" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="585" y="230" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Stationeries</text>
+<!-- Personal & Baby Care -->
+<rect x="468" y="236" width="254" height="154" rx="10" fill="#CECBF6" stroke="#534AB7" stroke-width="0.8"/>
+<text x="595" y="260" font-size="13" font-weight="600" fill="#26215C" text-anchor="middle" dominant-baseline="central">Personal &amp;</text>
+<text x="595" y="276" font-size="13" font-weight="600" fill="#26215C" text-anchor="middle" dominant-baseline="central">Baby Care</text>
+<text x="595" y="294" font-size="11" fill="#534AB7" text-anchor="middle" dominant-baseline="central">2 sub-categories</text>
+<text x="595" y="312" font-size="11" fill="#26215C" text-anchor="middle" dominant-baseline="central">Chaldal 1,091</text>
+<text x="595" y="330" font-size="11" fill="#26215C" text-anchor="middle" dominant-baseline="central">Shwapno 1,535</text>
 
-  <!-- Personal & Baby Care -->
-  <rect x="440" y="282" width="204" height="168" rx="10" fill="#CECBF6" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="542" y="306" font-size="13" font-weight="600" fill="#26215C" text-anchor="middle">Personal &amp;</text>
-  <text x="542" y="322" font-size="13" font-weight="600" fill="#26215C" text-anchor="middle">Baby Care</text>
-  <text x="542" y="340" font-size="11" fill="#534AB7" text-anchor="middle">2 sub-categories</text>
-  <text x="542" y="358" font-size="11" fill="#26215C" text-anchor="middle">Chaldal 1,091</text>
-  <text x="542" y="376" font-size="11" fill="#26215C" text-anchor="middle">Shwapno 1,535</text>
+<rect x="480" y="352" width="110" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="535" y="367" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Personal Care</text>
 
-  <rect x="452" y="392" width="90" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="497" y="406" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Personal Care</text>
-
-  <rect x="552" y="392" width="80" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-  <text x="592" y="406" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Baby Care</text>
+<rect x="602" y="352" width="100" height="30" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+<text x="652" y="367" font-size="10" fill="#26215C" text-anchor="middle" dominant-baseline="central">Baby Care</text>
 
 </svg>

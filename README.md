@@ -26,20 +26,6 @@ This is a dynamic web scraping project that collects real-time grocery data from
 <div align="center">
   <h1>Product Taxonomy</h1>
   <h3>Section → Category → Sub-Category</h3>
-
-  <br>
-
-  <table border="0">
-    <tr>
-      <td>
-        <img src="Food_items.png" alt="Food-items" width="400"/>
-      </td>
-      <td width="20"></td> 
-      <td>
-        <img src="Non-food_items.png" alt="Non-food_itmes" width="400"/>
-      </td>
-    </tr>
-  </table>
 </div>
 
 ![Product Taxonomy](./doc/product_taxonomy.svg)
