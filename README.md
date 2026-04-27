@@ -56,7 +56,7 @@ Rather than direct product matching, this project focuses on market-level trends
 
 - 📊 **Overview of Products & Brands (Side by Side Bar Graph) :** Compares total product listings and unique brand counts across Chaldal and Shwapno by section, category, and sub-category.
   
-- 🥧 **Brand Dominance by Product Share Chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
+- 🥧 **Brand Dominance by Product Share Chart (Pie chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
   
 - 📈 **Product Volume & Brand Diversity (Line & Bar Chart) :** Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
   
@@ -112,13 +112,9 @@ Rather than direct product matching, this project focuses on market-level trends
       - Generate other data using scripts and notebook
     ```
 
- 7. 📊 Open Tableau Dashboard
-    
-    ```
-      Tableau public view : [Visualisation] (https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
-    ```
+ 7. 📊 Open Tableau Dashboard : [Click here for Tableau public view] (https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
 
-Alternatively, Check the required file here: https://github.com/bithiNath/CS-Scientist/blob/main/selenium_scraper/scraped_data.csv
+
 
 ## Project Stucture
 
@@ -171,4 +167,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
-<p align="center">Built by ❤️ by <a href="https://github.com/bithiNath">@bithiNath</a></p>
+<p align="center">Developed by <a href="https://github.com/bithiNath">@bithiNath</a> ⚡</p>
