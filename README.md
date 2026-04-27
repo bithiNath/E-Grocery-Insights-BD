@@ -1,87 +1,120 @@
-<h1>E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries.</h1>
+# 🛒 E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries
 
-<p>Extracted and analyzed 7,197+ products from two leading Bangladeshi e-grocery platforms, with source-wise data preserved and consistently cleaned across both datasets. The processed data was then analyzed and visualized in Tableau, including brand distribution, promotional offer and savings patterns, price variance comparisons, and key cross-source insights.<p>
+Extracted and analyzed **7,197 product listings** from **Chaldal** and **Shwapno** — two leading Bangladeshi e-grocery platforms — uncovering brand distribution, 
+promotional savings, offer patterns, and price variance through data-driven analysis and Tableau visualizations.
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-2.0-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13.1-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-4.41.0x-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-3.0.1-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-1.24-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![License](https://img.shields.io/github/license/yourusername/yourrepo)
-![Last commit](https://img.shields.io/github/last-commit/yourusername/yourrepo)
+
 
 ## 📊 Dashboard Preview
-
+<br>
 <div align="center">
-  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="700"/>
+  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="800"/>
 </div>
 
 ## 📌 About
 
-This is a dynamic web scraping project that collects real-time grocery data from two online sources. The project aims to help consumers identify savings across categories,explore brand availability, analyze offers by product size and price segment, understand brand dominance, and compare price differences between the two sources. Instead of direct product matching, this project compares market trends and pricing across sources at the sub-category and brand levels.A structured data table is included to provide a clear overview of the data organization.
+Bangladesh's e-grocery sector is experiencing rapid growth, driven by factors such as bulk purchase discounts, exclusive product offers, free delivery above certain order thresholds, and the convenience of time-saving shopping. These incentives are reshaping how urban consumers purchase daily essentials. However, with multiple platforms offering varying prices, brands, and deals, consumers often struggle to identify where they can save the most. This project bridges that gap by scraping real-time grocery data from two major e-grocery sources in Bangladesh, enabling a data-driven comparison at the sub-category and brand level.
+Rather than direct product matching, this project focuses on market-level trends to uncover:
+- Which platform and product sub-categories offer the most savings
+- How brand availability differs across platforms
+- How offers vary by product size and price segment
+- Which top 10 brands dominate by product listing on each platform
+- Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
+
+### 🔍 Scope
+- Platforms covered: **Chaldal** and **Shwapno**
+- Data collection method: **Dynamic web scraping** using Selenium
+- Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
+- Total unique brands identified: **~700**
+- Data collected: **Late March 2026**
+
+### ⚠️ Limitations
+- **~890 duplicate** entries, including a few null values, were removed during cleaning.
+- **~350 products** appearing in multiple sub-categories were cleaned by retaining only the listing under their most relevant sub-category.
+- The same product may appear with different prices or unit sizes, as pricing and packaging vary across platforms.
+- Brand names were extracted from product titles using keyword frequency analysis, followed by manual correction — resulting in **~700 unique brands** identified.
+- **~4,000 products** had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine actual unit, `offer_status`, `Total_savings`, `Actual_unit_price`, and `Market_price`.
+- Out-of-stock status on Chaldal could not be scraped, so such few products remain in the dataset and may slightly bias the results.
 
 ## 📊 Data Overview
 
 <div align="center">
-  <h1>Product Taxonomy</h1>
+  <h2>Product Taxonomy</h2>
   <h3>Section → Category → Sub-Category</h3>
+  <img src="./doc/product_taxonomy.svg" width="800" alt="Product Taxonomy"/>
 </div>
 
-![Product Taxonomy](./doc/product_taxonomy.svg)
-
-## 📈 Project Highlights
-
-- Extracted and analyzed 7,000+ products from multiple e-grocery platforms
-- Performed data cleaning, unit standardization, and price normalization
-- Built price comparison model across brands and sources
-- Identified price variance patterns across sub-categories
-- Developed interactive Tableau dashboards for visualization
 
 ## ✨ Features
 
-- 📊 Overview of Products & Brands (Side by Side Bar Graph) :
-- 🥧 Brand Dominance by Product Count (Pie Chart) :
-- 📈 Product Volume & Brand Diversity (Line & Bar Chart) :
-- 🫧 Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :
-- 🌡️ Offer Distribution by Product Size & Price Segments (Heat Map) :
-- 🔵 Price Variance between Regular and All Products across Sources (Circle Chart) :
+- 📊 **Overview of Products & Brands (Side by Side Bar Graph) :** Compares total product listings and unique brand counts across Chaldal and Shwapno by section, category, and sub-category.
+  
+- 🥧 **Brand Dominance by Product Share Chart (Pie chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
+  
+- 📈 **Product Volume & Brand Diversity (Line & Bar Chart) :** Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
+  
+- 🫧 **Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :** Highlights which sub-categories have the highest concentration of total savings percentage,  and where free products are most available across both platforms.
+  
+- 🌡️ **Offer Distribution by Product Size & Price Segments (Heat Map) :** Reveals which size and price segment combinations have the highest offer concentration on each
+   platform.
+  
+- 🔵 **Price Variance between Regular and All Products across Sources (Circle Chart) :** Compares price differences between all products and regularly purchased food items,
+  focusing on common brands within the same sub-category, segmented by price range across both platforms.
+
 
 ## ⚙️ Quick Start
 
 1. 🔽 Clone Repository
-   `git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
-cd E-Grocery-Insights-BD`
+   
+   ```
+     git clone https://github.com/bithiNath/E-Grocery-Insights-BD.git
+     cd E-Grocery-Insights-BD
+   ```
+
 2. 🐍 Setup Environment (Windows-friendly)
+   
    ```
     python -m venv venv
     venv\Scripts\activate
    ```
+   
 3. 📦 Install minimal dependencies
+   
    ```
     pip install -r requirements.txt
    ```
+   
 4. ▶️ Run Data collection Script
-   ```
-   python src/data_Scraping_chaldal.py
-   python src/data_scraping_shwapno.py
-   ```
+   
+    ```
+      python src/data_Scraping_chaldal.py
+      python src/data_scraping_shwapno.py
+    ```
+   
 5. 🧹 Run Data Cleaning (Notebook)
-   ```
+    
+    ```
       data_cleaning.ipynb
-   ```
-6. 📂 Data Information
-   ```
-   - Raw data is excluded (.gitignore)
-   - Available required data: `data/interim/combined_data_BrandName_cleaned_3.csv`
-   - Generate other data using scripts and notebook
-   ```
-7. 📊 Open Tableau Dashboard
-   ```
-   Tableau public view : https://public.tableau.com/app/profile/bithi.nath/viz/CSscientistupdat
-   ```
+    ```
+   
+ 6. 📂 Data Information
+    
+    ```
+      - Raw data is excluded (.gitignore)
+      - Available required data: `data/interim/combined_data_BrandName_cleaned_3.csv`
+      - Generate other data using scripts and notebook
+    ```
 
-Alternatively, Check the required file here: https://github.com/bithiNath/CS-Scientist/blob/main/selenium_scraper/scraped_data.csv
+ 7. 📊 Open Tableau Dashboard : [Click here for Tableau public view](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
+
+
 
 ## Project Stucture
 
@@ -89,34 +122,39 @@ Alternatively, Check the required file here: https://github.com/bithiNath/CS-Sci
 E-Grocery Insights/
 │
 ├── data/
-│   ├── raw/                                          # Step 1: Scraped raw data
+│   ├── raw/                                           # Step 1: Scraped raw data
 │   │   ├── shwapno_data_1.csv
 │   │   └── chaldal_data_2.csv
 │   │
-│   ├── interim/                                       # Step 3: Output after cleaning
-│   │   ├── combined_data_BrandName_3.csv
-│   │   ├── combined_data_BrandName_cleaned_3.csv
-│   │   └── df_combined_all_columns_4.csv
-│   │
+│   ├── interim/  
+|   |   ├── combined_data_BrandName_3.csv              # Step 3: Generated after cleaning, used for brand name identification
+│   │   └── combined_data_BrandName_cleaned_3.csv      # Step 4: Manually reviewed and used to extract brand names
+│   │   
 │   └── processed/
-│       └── df_final.csv                               # Step-4 Final Output
+│       └── df_final.csv                               # Step-5 Final Output
 │
 ├── notebook/
 │   └── data_cleaning.ipynb                            # Step 2: Cleaning data
 │
 ├── assets/
-│   └── visualization                                  # Step-5 : Deshboard Preview
+│   └── visualization                                  # Step-6 : Deshboard Preview
 │
-├── requirements.txt                                   # Step-6 : Required libraries
+├── requirements.txt                                   # Step-7 : Required libraries
 |
-├── .gitignore                                         # Step - 7 : Project Configuration
+├── .gitignore                                         # Step - 8 : Project Configuration
 |
-└── README.md                                          # Step-8 : Project Documentation
+└── README.md                                          # Step-9 : Project Documentation
 ```
+
+## 🎯 Future Goals
+- Incorporate statistical analysis on the existing dataset
+- Automate scraping with scheduled runs to track price changes over time
+- Conduct seasonal analysis (e.g., Ramadan, Eid effects) and visualize through Power BI
+- Expand to more e-grocery platforms for broader market comparison
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🤝 Contributing
 
@@ -124,5 +162,9 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📬 Contact
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: youremail@gmail.com
+- **GitHub:** [@bithiNath](https://github.com/bithiNath)
+- **LinkedIn:** [Bithi Nath](https://linkedin.com/in/bithinath)
+
+---
+
+<p align="center">Developed by <a href="https://github.com/bithiNath">@bithiNath</a> ⚡</p>
