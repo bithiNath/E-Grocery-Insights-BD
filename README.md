@@ -36,14 +36,12 @@ Rather than direct product matching, this project focuses on market-level trends
 - Data collected: **Late March 2026**
 
 ### ⚠️ Limitations
-- ~890 duplicate entries, including a few null values, were removed during cleaning.
-- ~350 products appearing in multiple sub-categories were cleaned by retaining only the listing under their most relevant sub-category.
+- **~890 duplicate** entries, including a few null values, were removed during cleaning.
+- **~350 products** appearing in multiple sub-categories were cleaned by retaining only the listing under their most relevant sub-category.
 - The same product may appear with different prices or unit sizes, as pricing and packaging vary across platforms.
 - Brand names were extracted from product titles using keyword frequency analysis, followed by manual correction — resulting in **~700 unique brands** identified.
-- ~4,000 products had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine actual unit, `offer_status`, `Total_savings`, 
-  `Actual_unit_price`, and `Market_price`.
+- **~4,000 products** had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine actual unit, `offer_status`, `Total_savings`, `Actual_unit_price`, and `Market_price`.
 - Out-of-stock status on Chaldal could not be scraped, so such few products remain in the dataset and may slightly bias the results.
-- No direct product matching — comparison is done at the sub-category and brand level due to inconsistent product naming across platforms.
 
 ## 📊 Data Overview
 
@@ -56,13 +54,17 @@ Rather than direct product matching, this project focuses on market-level trends
 
 ## ✨ Features
 
-- 📊 **Overview of Products & Brands (Side by Side Bar Graph) :** Compares total product listings and unique brand counts across Chaldal and Shwapno by section, category, and
-  sub-category.
-- 🥧 **Brand Dominance by Product Count (Pie Chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
+- 📊 **Overview of Products & Brands (Side by Side Bar Graph) :** Compares total product listings and unique brand counts across Chaldal and Shwapno by section, category, and sub-category.
+  
+- 🥧 **Brand Dominance by Product Share Chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
+  
 - 📈 **Product Volume & Brand Diversity (Line & Bar Chart) :** Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
-- 🫧 **Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :** Highlights which sub-categories have the highest concentration of discounted and BOGO products by    total savings percentage, and where free products are most available across both platforms.  
+  
+- 🫧 **Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :** Highlights which sub-categories have the highest concentration of total savings percentage,  and where free products are most available across both platforms.
+  
 - 🌡️ **Offer Distribution by Product Size & Price Segments (Heat Map) :** Reveals which size and price segment combinations have the highest offer concentration on each
    platform.
+  
 - 🔵 **Price Variance between Regular and All Products across Sources (Circle Chart) :** Compares price differences between all products and regularly purchased food items,
   focusing on common brands within the same sub-category, segmented by price range across both platforms.
 
@@ -113,7 +115,7 @@ Rather than direct product matching, this project focuses on market-level trends
  7. 📊 Open Tableau Dashboard
     
     ```
-      Tableau public view : https://public.tableau.com/app/profile/bithi.nath/viz/CSscientistupdat
+      Tableau public view : [Visualisation] (https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
     ```
 
 Alternatively, Check the required file here: https://github.com/bithiNath/CS-Scientist/blob/main/selenium_scraper/scraped_data.csv
