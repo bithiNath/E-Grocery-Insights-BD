@@ -112,7 +112,7 @@ Rather than direct product matching, this project focuses on market-level trends
       - Generate other data using scripts and notebook
     ```
 
- 7. 📊 Open Tableau Dashboard : [Click here for Tableau public view] (https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
+ 7. 📊 Open Tableau Dashboard : [Click here for Tableau public view](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
 
 
 
