@@ -156,6 +156,9 @@ E-Grocery Insights/
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## ⚠️ Disclaimer
+This project is created for educational purposes to practice data analysis and visualization. The data used was collected from publicly available sources. This project does not aim to harm, misuse, or violate the terms of any platform.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
