@@ -27,6 +27,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - How offers vary by product size and price segment
 - Which top 10 brands dominate by product listing on each platform
 - Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
+  
 
 ### 🔍 Scope
 - Platforms covered: **Chaldal** and **Shwapno**
