@@ -38,7 +38,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - Which top 10 brands dominate by product listing on each platform
 - Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
 
-### 🔍 Scope
+### 🔍 Project Scope
 - Platforms covered: [Chaldal](https://chaldal.com/) and [Shwapno](https://www.shwapno.com/)
 - Data collection method: **Dynamic web scraping** using Selenium
 - Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
