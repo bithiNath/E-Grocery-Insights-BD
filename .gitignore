@@ -7,6 +7,13 @@ data/interim/*.csv
 !data/interim/combined_data_BrandName_cleaned_3.csv
 data/processed/*.csv
 
+# Keep this one specific file
+!data/interim/combined_data_BrandName_cleaned_3.csv
+
+# Keep empty folders visible in Git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
 # Ignore python artifacts
 __pycache__/
 .vscode/
