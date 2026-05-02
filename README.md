@@ -68,6 +68,8 @@ Rather than direct product matching, this project focuses on market-level trends
 ## ✨ Features
 
 - 📊 **Overview of Products & Brands (Side by Side Bar Graph) :** Compares total product listings and unique brand counts across Chaldal and Shwapno by section, category, and sub-category.
+
+  key findings: ...............
   
 - 🥧 **Brand Dominance by Product Share Chart (Pie chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
   
