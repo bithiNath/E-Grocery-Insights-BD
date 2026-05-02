@@ -4,16 +4,7 @@ Thumbs.db
 #Ignore data files
 data/raw/*.csv
 data/interim/*.csv
-data/processed/*.csv
-
-# Keep folder structure (important)
-!data/
-!data/raw/
-!data/interim/
-!data/processed/
-
-# Keep one specific file in interim
-!data/interim/combined_data_BrandName_cleaned_3.csv
+!data/i
 
 # Keep placeholder files to show empty folders
 !data/raw/.gitkeep
