@@ -11,8 +11,10 @@ promotional savings, offer patterns, and price variance through data-driven anal
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 
+<br>
 
 ## 📊 Dashboard Preview
+ **[View Interactive Dashboard](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)**
 <br>
 <div align="center">
   <img src="doc/Dashboard.png" alt="Dashboard Preview" width="800"/>
@@ -29,7 +31,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
 
 ### 🔍 Scope
-- Platforms covered: **Chaldal** and **Shwapno**
+- Platforms covered: [Chaldal](https://chaldal.com/) and [Shwapno](https://www.shwapno.com/)
 - Data collection method: **Dynamic web scraping** using Selenium
 - Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
 - Total unique brands identified: **~700**
