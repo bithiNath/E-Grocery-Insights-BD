@@ -20,6 +20,8 @@ promotional savings, offer patterns, and price variance through data-driven anal
   <img src="doc/Dashboard.png" alt="Dashboard Preview" width="1100"/>
 </div>
 
+<br>
+
 ## 📌 About
 
 Bangladesh's e-grocery sector is experiencing rapid growth, driven by factors such as bulk purchase discounts, exclusive product offers, free delivery above certain order thresholds, and the convenience of time-saving shopping. These incentives are reshaping how urban consumers purchase daily essentials. However, with multiple platforms offering varying prices, brands, and deals, consumers often struggle to identify where they can save the most. This project bridges that gap by scraping real-time grocery data from two major e-grocery sources in Bangladesh, enabling a data-driven comparison at the sub-category and brand level.
