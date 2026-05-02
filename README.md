@@ -17,7 +17,7 @@ promotional savings, offer patterns, and price variance through data-driven anal
  **[View Interactive Dashboard](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)**
 <br>
 <div align="center">
-  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="800"/>
+  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="1100"/>
 </div>
 
 ## 📌 About
