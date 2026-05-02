@@ -4,8 +4,11 @@ Thumbs.db
 #Ignore data files
 data/raw/*.csv
 data/interim/*.csv
-!data/interim/combined_data_BrandName_cleaned_3.csv
-data/processed/*.csv
+!data/i
+
+# Keep placeholder files to show empty folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 
 # Keep this one specific file
 !data/interim/combined_data_BrandName_cleaned_3.csv

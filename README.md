@@ -11,12 +11,16 @@ promotional savings, offer patterns, and price variance through data-driven anal
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 
+<br>
 
 ## 📊 Dashboard Preview
+ **[View Interactive Dashboard](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)**
 <br>
 <div align="center">
-  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="800"/>
+  <img src="doc/Dashboard.png" alt="Dashboard Preview" width="1100"/>
 </div>
+
+<br>
 
 ## 📌 About
 
@@ -29,7 +33,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
 
 ### 🔍 Scope
-- Platforms covered: **Chaldal** and **Shwapno**
+- Platforms covered: [Chaldal](https://chaldal.com/) and [Shwapno](https://www.shwapno.com/)
 - Data collection method: **Dynamic web scraping** using Selenium
 - Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
 - Total unique brands identified: **~700**
@@ -43,6 +47,8 @@ Rather than direct product matching, this project focuses on market-level trends
 - **~4,000 products** had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine actual unit, `offer_status`, `Total_savings`, `Actual_unit_price`, and `Market_price`.
 - Out-of-stock status on Chaldal could not be scraped, so such few products remain in the dataset and may slightly bias the results.
 
+<br>
+
 ## 📊 Data Overview
 
 <div align="center">
@@ -51,6 +57,7 @@ Rather than direct product matching, this project focuses on market-level trends
   <img src="./doc/product_taxonomy.svg" width="800" alt="Product Taxonomy"/>
 </div>
 
+<br>
 
 ## ✨ Features
 
@@ -68,6 +75,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - 🔵 **Price Variance between Regular and All Products across Sources (Circle Chart) :** Compares price differences between all products and regularly purchased food items,
   focusing on common brands within the same sub-category, segmented by price range across both platforms.
 
+<br>
 
 ## ⚙️ Quick Start
 
@@ -114,7 +122,7 @@ Rather than direct product matching, this project focuses on market-level trends
 
  7. 📊 Open Tableau Dashboard : [Click here for Tableau public view](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
 
-
+<br>
 
 ## Project Stucture
 
@@ -146,19 +154,28 @@ E-Grocery Insights/
 └── README.md                                          # Step-9 : Project Documentation
 ```
 
+<br>
+
 ## 🎯 Future Goals
 - Incorporate statistical analysis on the existing dataset
 - Automate scraping with scheduled runs to track price changes over time
 - Conduct seasonal analysis (e.g., Ramadan, Eid effects) and visualize through Power BI
 - Expand to more e-grocery platforms for broader market comparison
 
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+
+## ⚠️ Disclaimer
+This project is created for educational purposes to practice data analysis and visualization. The data used was collected from publicly available sources. This project does not aim to harm, misuse, or violate the terms of any platform.
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
+
 
 ## 📬 Contact
 
@@ -166,5 +183,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 - **LinkedIn:** [Bithi Nath](https://linkedin.com/in/bithinath)
 
 ---
+
+<br>
 
 <p align="center">Developed by <a href="https://github.com/bithiNath">@bithiNath</a> ⚡</p>
