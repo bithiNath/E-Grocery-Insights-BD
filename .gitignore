@@ -15,6 +15,10 @@ data/processed/*.csv
 # Keep one specific file in interim
 !data/interim/combined_data_BrandName_cleaned_3.csv
 
+# Keep placeholder files to show empty folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
 # Ignore python artifacts
 __pycache__/
 .vscode/
