@@ -14,8 +14,14 @@ promotional savings, offer patterns, and price variance through data-driven anal
 <br>
 
 ## 📊 Dashboard Preview
- **[View Interactive Dashboard](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)**
+ 
+ > To explore each chart individually in detail, click **"View Detailed Charts"** or use the **"button"** at the top-right of the dashboard.
+
+**[View Interactive Dashboard](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)**
+ &nbsp;|&nbsp; **[View Detailed Charts](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Detailedcharts?publish=yes)**
+ 
 <br>
+
 <div align="center">
   <img src="doc/Dashboard.png" alt="Dashboard Preview" width="1100"/>
 </div>
@@ -130,16 +136,15 @@ Rather than direct product matching, this project focuses on market-level trends
 E-Grocery Insights/
 │
 ├── data/
-│   ├── raw/                                           # Step 1: Scraped raw data
-│   │   ├── shwapno_data_1.csv
-│   │   └── chaldal_data_2.csv
+│   ├── raw/                                           
+│   │   └── .gitkeep                                   # Step 1: CSV files are git-ignored; run scraper to get data
 │   │
 │   ├── interim/  
-|   |   ├── combined_data_BrandName_3.csv              # Step 3: Generated after cleaning, used for brand name identification
-│   │   └── combined_data_BrandName_cleaned_3.csv      # Step 4: Manually reviewed and used to extract brand names
+|   |   ├── combined_data_BrandName_3.csv              # Step 3: For brand name identification only — not used in final analysis; run notebook to generate
+│   │   └── combined_data_BrandName_cleaned_3.csv      # Step 4: Manually cleaned version — used to extract final brand name list
 │   │   
 │   └── processed/
-│       └── df_final.csv                               # Step-5 Final Output
+│       └── .gitkeep                                   # Step-5: CSV files are git-ignored; run scraper to get data
 │
 ├── notebook/
 │   └── data_cleaning.ipynb                            # Step 2: Cleaning data
