@@ -42,10 +42,10 @@ Rather than direct product matching, this project focuses on market-level trends
 - Platforms covered: [Chaldal](https://chaldal.com/) and [Shwapno](https://www.shwapno.com/)
 - Data collection method: **Dynamic web scraping** using Selenium
 - Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
-- Total unique brands identified: **~700**
-- Data collected: **Late March 2026**
 - Data points collected per product: Title, Previous price, Current price, Unit, Stock and more
 - Additional columns derived during cleaning: Section, Category, Sub-category, Brand, Offer, Toal Savings, Price Segment, Size Category, common brands and more
+- Total unique brands identified: **~700**
+- Data collected: **Late March 2026**
 
 ### ⚠️ Limitations
 - **~890 duplicate** entries, including a few null values, were removed during cleaning.
