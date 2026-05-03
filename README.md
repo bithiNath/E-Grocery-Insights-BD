@@ -67,20 +67,24 @@ Rather than direct product matching, this project focuses on market-level trends
 
 ## ✨ Features
 
-- 📊 **Overview of Products & Brands (Side by Side Bar Graph) :** Compares total product listings and unique brand counts across Chaldal and Shwapno by section, category, and sub-category.
+- 📊 **Overview of Products & Brands :** Compares total product listings across Chaldal and Shwapno by section, category, and sub-category.
+  
+  - **Personal Care** & **Snacks** lead in SKU volume across both platforms, with **Shwapno** holding a significantly **larger sub-catalogue** in both.
+  - Shwapno consistently lists more products than Chaldal across most sub-categories in the food-items section.
+  - In **Non-Food**, **Chaldal outperforms** Shwapno in all sub-categories except Personal Care.
+  - **Fruits**, **Lentils & Pulses**, **Salt**, **Spices**, and **Canned Food** have the **lowest SKU** counts across both platforms.
 
-  key findings: ...............
   
-- 🥧 **Brand Dominance by Product Share Chart (Pie chart) :** Shows which top 10 brands hold the largest share of products within each category per platform.
+- 🥧 **Top Brands by Product Availability:** Shows which top 10 brands hold the largest share of products within each category per platform.
   
-- 📈 **Product Volume & Brand Diversity (Line & Bar Chart) :** Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
+- 📈 **SKU Distribution Across sub-categories :** Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
   
-- 🫧 **Top Sub-Categories by Savings & Free Products (Packed Bubble Chart) :** Highlights which sub-categories have the highest concentration of total savings percentage,  and where free products are most available across both platforms.
+- 🫧 **Top Sub-Categories by Savings & Free Products :** Highlights which sub-categories have the highest concentration of total savings percentage,  and where free products are most available across both platforms.
   
-- 🌡️ **Offer Distribution by Product Size & Price Segments (Heat Map) :** Reveals which size and price segment combinations have the highest offer concentration on each
+- 🌡️ **Offer Distribution by Product Size & Price Segments :** Reveals which size and price segment combinations have the highest offer concentration on each
    platform.
   
-- 🔵 **Price Variance between Regular and All Products across Sources (Circle Chart) :** Compares price differences between all products and regularly purchased food items,
+- 🔵 **Price Variance between Regular and All Products across Sources :** Compares price differences between all products and regularly purchased food items,
   focusing on common brands within the same sub-category, segmented by price range across both platforms.
 
 <br>
