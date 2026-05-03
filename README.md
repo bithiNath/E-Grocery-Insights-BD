@@ -19,8 +19,7 @@ promotional savings, offer patterns, and price variance through data-driven anal
 
 **[View Interactive Dashboard](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)**
  &nbsp;|&nbsp; **[View Detailed Charts](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Detailedcharts?publish=yes)**
- 
-<br>
+
 
 <div align="center">
   <img src="doc/Dashboard.png" alt="Dashboard Preview" width="1100"/>
@@ -38,7 +37,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - Which top 10 brands dominate by product listing on each platform
 - Which platform offers lower prices across all products and regularly purchased items of common brands, analyzed by price segment and category
 
-### 🔍 Project Scope
+## 🔍 Project Scope
 - Platforms covered: [Chaldal](https://chaldal.com/) and [Shwapno](https://www.shwapno.com/)
 - Data collection method: **Dynamic web scraping** using Selenium
 - Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
@@ -47,7 +46,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - Total unique brands identified: **~700**
 - Data collected: **Late March 2026**
 
-### ⚠️ Limitations
+## ⚠️ Limitations
 - **~890 duplicate** entries, including a few null values, were removed during cleaning.
 - **~350 products** appearing in multiple sub-categories were cleaned by retaining only the listing under their most relevant sub-category.
 - The same product may appear with different prices or unit sizes, as pricing and packaging vary across platforms.
@@ -58,7 +57,6 @@ Rather than direct product matching, this project focuses on market-level trends
 <br>
 
 ## 📊 Data Overview
-
 <div align="center">
   <h2>Product Taxonomy</h2>
   <h3>Section → Category → Sub-Category</h3>
@@ -130,7 +128,10 @@ Rather than direct product matching, this project focuses on market-level trends
       - Generate other data using scripts and notebook
     ```
 
- 7. 📊 Open Tableau Dashboard : [Click here for Tableau public view](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard)
+ 7. 📊 Open Tableau Dashboard : [Click here for Tableau public view](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Dashboard) 
+ &nbsp;|&nbsp; **[View Detailed Charts](https://public.tableau.com/app/profile/bithi.nath/viz/visualization_1_17772762990980/Detailedcharts?publish=yes)**
+
+
 
 <br>
 
