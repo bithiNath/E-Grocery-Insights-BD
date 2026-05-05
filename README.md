@@ -67,7 +67,7 @@ Rather than direct product matching, this project focuses on market-level trends
 
 ## ✨ Features
 
-- 📊 **Overview of Products & Brands :** Compares total product listings across Chaldal and Shwapno by section, category, and sub-category.
+- 📊 **SKU Distribution Across sub-categories :** Compares total product listings across Chaldal and Shwapno by section, category, and sub-category.
   
   - **Personal Care** & **Snacks** lead in SKU volume across both platforms, with **Shwapno** holding a significantly **larger sub-catalogue** in both.
   - Shwapno consistently lists more products than Chaldal across most sub-categories in the food-items section.
@@ -75,10 +75,22 @@ Rather than direct product matching, this project focuses on market-level trends
   - **Fruits**, **Lentils & Pulses**, **Salt**, **Spices**, and **Canned Food** have the **lowest SKU** counts across both platforms.
 
   
-- 🥧 **Top Brands by Product Availability:** Shows which top 10 brands hold the largest share of products within each category per platform.
+- 🥧 **Top Brands by Product Availability:** Shows which top 10 brands hold the largest share of products per platform.
+- 
+   - The largest share comes from **Fresh Produce (Unbranded)** and **Unknown Brand**—local items without brands and products with no identifiable brand in the title.
+   - **House Brands** rank next, mainly driven by Shwapno; Chaldal has relatively low presence.
+   - **Pran and ACI** consistently rank within the top 3 on both platforms.
+   - Platform-wise ranking: **Shwapno:** Pran > ACI > Radhuni and **Chaldal:** Fresh Produce > Pran > ACI
+
   
-- 📈 **SKU Distribution Across sub-categories :** Visualizes the relationship between number of products and brand variety across section, category and sub-categories.
+- 📊 **Product Volume & Brand Diversity :** Product Volume & Brand Diversity shows how product availability and brand presence vary across sub-categories and between platforms.
   
+   - In most sub-categories, a higher number of products corresponds to a higher number of brands across both platforms. *
+   - **Personal Care** has the highest concentration of both products and brands.
+   - In **Snacks**, both platforms have a similar number of brands.
+   - In some other sub-categories (besides Snacks), both brands and products are relatively low and almost similar across platforms, indicating **lower demand** and purchase activity, which results in **limited brand presence**.
+   - **Fruits** & **Vegetables** have little to no brand presence, as these are mostly local, unbranded items. However, a few brands are present in the **Meat & Fish** sub-category.
+   
 - 🫧 **Top Sub-Categories by Savings & Free Products :** Highlights which sub-categories have the highest concentration of total savings percentage,  and where free products are most available across both platforms.
   
 - 🌡️ **Offer Distribution by Product Size & Price Segments :** Reveals which size and price segment combinations have the highest offer concentration on each
