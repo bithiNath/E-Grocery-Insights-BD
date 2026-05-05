@@ -67,23 +67,25 @@ Rather than direct product matching, this project focuses on market-level trends
 
 ## ✨ Features
 
-- 📊 **SKU Distribution Across sub-categories :** Compares total product listings across Chaldal and Shwapno by section, category, and sub-category.
-  
-  - **Personal Care** & **Snacks** lead in SKU volume across both platforms, with **Shwapno** holding a significantly **larger sub-catalogue** in both.
-  - Shwapno consistently lists more products than Chaldal across most sub-categories in the food-items section.
-  - In **Non-Food**, **Chaldal outperforms** Shwapno in all sub-categories except Personal Care.
-  - **Fruits**, **Lentils & Pulses**, **Salt**, **Spices**, and **Canned Food** have the **lowest SKU** counts across both platforms.
+### 📊 **Graph-1 :** SKU Distribution Across sub-categories :
+   >  Compares total product listings across Chaldal and Shwapno by section, category, and sub-category.
 
-  
-- 🥧 **Top Brands by Product Availability:** Shows which top 10 brands hold the largest share of products per platform.
-- 
+   -  **Personal Care** & **Snacks** lead in SKU volume across both platforms, with **Shwapno** holding a significantly **larger sub-catalogue** in both.
+   -  Shwapno consistently lists more products than Chaldal across most sub-categories in the food-items section.
+   -  In **Non-Food**, **Chaldal outperforms** Shwapno in all sub-categories except Personal Care.
+   -  **Fruits**, **Lentils & Pulses**, **Salt**, **Spices**, and **Canned Food** have the **lowest SKU** counts across both platforms.
+
+### 🥧 **Graph-2:** Top Brands by Product Availability:
+  >  Shows which top 10 brands hold the largest share of products per platform.
+
    - The largest share comes from **Fresh Produce (Unbranded)** and **Unknown Brand**—local items without brands and products with no identifiable brand in the title.
    - **House Brands** rank next, mainly driven by Shwapno; Chaldal has relatively low presence.
    - **Pran and ACI** consistently rank within the top 3 on both platforms.
    - Platform-wise ranking: **Shwapno:** Pran > ACI > Radhuni and **Chaldal:** Fresh Produce > Pran > ACI
 
   
-- 📊 **Product Volume & Brand Diversity :** Product Volume & Brand Diversity shows how product availability and brand presence vary across sub-categories and between platforms.
+### 📊 **Graph-3:** Product Volume & Brand Diversity :
+  >  Product Volume & Brand Diversity shows how product availability and brand presence vary across sub-categories and between platforms.
   
    - In most sub-categories, a higher number of products corresponds to a higher number of brands across both platforms. *
    - **Personal Care** has the highest concentration of both products and brands.
@@ -91,13 +93,31 @@ Rather than direct product matching, this project focuses on market-level trends
    - In some other sub-categories (besides Snacks), both brands and products are relatively low and almost similar across platforms, indicating **lower demand** and purchase activity, which results in **limited brand presence**.
    - **Fruits** & **Vegetables** have little to no brand presence, as these are mostly local, unbranded items. However, a few brands are present in the **Meat & Fish** sub-category.
    
-- 🫧 **Top Sub-Categories by Savings & Free Products :** Highlights which sub-categories have the highest concentration of total savings percentage,  and where free products are most available across both platforms.
+### 🫧 **Graph-4:** Top Sub-Categories by Savings & Free Products : 
+
+> Shows combined count of discounted and free products per sub-category across both platforms.
+
+  -  Shwapno & Chaldal both concentrate the **highest savings & free products** in the **Non-Food** section.
+  -  Shwapno leads in **Personal Care, Beverages & Snacks** — both for money savings and free product count.
+  -  Chaldal leads in Baby Care for discounted & free product count with maximum savings, while Personal Care tops in free product availability.
+  -  Across both platforms, Personal Care consistently ranks as the top sub-category for free product availability.
   
-- 🌡️ **Offer Distribution by Product Size & Price Segments :** Reveals which size and price segment combinations have the highest offer concentration on each
-   platform.
+- 🌡️ **Graph-5:** Offer Distribution by Product Size & Price Segments :**
+  > Shows the count of discounted products across price segments (Budget-friendly, Standard, High-value) and size categories (Large, Medium, Small).
+
+  - **Small** sized products dominate offers across all price segments, with **Standard** segment leading the highest offer count.
+  - **Large** sized products have the least offer availability across all segments, with **Standard & High-value** having almost no Large product offers.
   
-- 🔵 **Price Variance between Regular and All Products across Sources :** Compares price differences between all products and regularly purchased food items,
-  focusing on common brands within the same sub-category, segmented by price range across both platforms.
+- 🔵 **Graph-6:** Price Variance between Regular and All Products across Sources :
+  > Compares Avg. standard price per unit between 🟡 Chaldal and 🟢 Shwapno across Food & Non-Food sub-categories.  
+  > Analysis narrows from **all products → regular products → common brands → price segments** to isolate true price differences.
+
+- **Personal Care** shows the highest price variance — likely due to **differences in product mix** across platforms rather than direct pricing differences.
+- **Chocolates & Ice Cream** shows the largest price gap — even when filtered to **regular products with common brands**, variance persists as exact product-level matching was not applied.
+- When filtered to **regular products with common brands**, most Food sub-categories show **closely aligned prices** between platforms, suggesting brand-level pricing is largely consistent.
+- **Breakfast, Spices & Ingredients, and Frozen Snacks** maintain notable price differences even after filtering to common brands — indicating platform-level pricing strategy differences.
+- Across **price segments**, Budget-friendly sub-categories show the least variance, while **High-value segment** reveals the widest price gap — especially in Chocolates & Beverages.
+
 
 <br>
 
