@@ -1,4 +1,4 @@
-# 🛒 E-Grocery Insights: Decoding Product Diversity and Savings in Online Groceries
+# 🛒 E-Grocery Insights BD: Decoding Product Diversity and Savings in Online Groceries
 
 Extracted and analyzed **7,197 product listings** from **Chaldal** and **Shwapno** — two leading Bangladeshi e-grocery platforms — uncovering brand distribution, 
 promotional savings, offer patterns, and price variance through data-driven analysis and Tableau visualizations.
