@@ -43,7 +43,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - Total product listings: **7,197** (Chaldal: 3,337 | Shwapno: 3,860)
 - Data points collected per product: Title, Previous price, Current price, Unit, Stock and more
 - Additional columns derived during cleaning: Section, Category, Sub-category, Brand, Offer, Toal Savings, Price Segment, Size Category, common brands and more
-- Total unique brands identified: **~700**
+- Total unique brands identified: **~787**
 - Data collected: **Late March 2026**
 
 ## ⚠️ Limitations
