@@ -51,7 +51,7 @@ Rather than direct product matching, this project focuses on market-level trends
 - **~350 products** appearing in multiple sub-categories were cleaned by retaining only the listing under their most relevant sub-category.
 - The same product may appear with different prices or unit sizes, as pricing and packaging vary across platforms.
 - Brand names were extracted from product titles using keyword frequency analysis, followed by manual correction — resulting in **~700 unique brands** identified.
-- **~4,000 products** had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine actual unit, `offer_status`, `Total_savings`, `Actual_unit_price`, and `Market_price`.
+- **~4,000 products** had generic units (pcs, each, pack, etc.), so an `Extra_info` column was extracted from titles to determine `actual unit`, `offer_status`, `Total_savings`, `Actual_unit_price`, and `Market_price`.
 - Out-of-stock status on Chaldal could not be scraped, so such few products remain in the dataset and may slightly bias the results.
 
 <br>
